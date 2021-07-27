@@ -5,11 +5,11 @@ GET http://localhost:3000/users/60fdda2898b7355038c79bfd
 ###
 
 
-POST http://localhost:3000/users/
+POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "firstname": "Dylan",
+    "firstname": "Rhys",
     "lastname": "Dent",
     "email": "June 17, 1989"
 }

@@ -1,6 +1,4 @@
-console.log("Hello World");
 const restUrl = window.location.href + "users";
-console.log(restUrl);
 async function getUsers() {
 	const users = await fetch(restUrl);
 	return users.json();
@@ -13,23 +11,25 @@ async function getUserByName(id) {
 	const users = await fetch(restUrl + "/" + id);
 	return users.json();
 }
-async function createUser(user) {
+async function createUser(userData) {
 	const newUser = await fetch(restUrl, {
 		method: "POST",
 		headers: { "Content-Type": "application/json" },
-		body: JSON.stringify(user),
+		body: JSON.stringify(userData),
 	});
 	return newUser.json();
 }
-async function updateUser(id, updatedData) {
+async function updateUser(id, userData) {
 	const updatedUser = await fetch(restUrl + "/" + id, {
 		method: "PATCH",
 		headers: { "Content-Type": "application/json" },
-		body: JSON.stringify(updatedData),
+		body: JSON.stringify(userData),
 	});
 	return updatedUser.json();
 }
-window.onload = async function () {
-	const user = await getUserById("60fed3d3e83a2c590c55b7e0");
-	console.log(user);
-};
+async function deleteUser(id) {
+	const deleltedUser = await fetch(restUrl + "/" + id, {
+		method: "DELETE",
+	});
+	return deleltedUser.json();
+}

@@ -4,66 +4,37 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Users Database</title>
+		<title>User DB</title>
 	</head>
 	<body>
-		<!-- 
-			- element that lists user names and ids
-			- input for retreiving user by id or name
-			- element to view user info
-		 -->
-		<div class="error-message"></div>
-		<button class="list-users-button">Refresh User List</button>
-		<ul class="user-list"></ul>
-		<form class="get-user-by-id-form">
-			<label for="user-id-input">User ID</label>
-			<input
-				type="text"
-				name="user-id-input"
-				id="user-id-input"
-				class="user-id-input"
-			/>
-			<input type="submit" name="get-user-button" disabled value="Get User" />
-		</form>
-		<form class="user-data-form">
-			<fieldset name="user-data-fields">
-				<!--#region Fields-->
+		<section>
+			<h2>User List</h2>
+			<ul class="user-list"></ul>
+		</section>
+		<section>
+			<h2>User Data</h2>
+			<form>
 				<label for="first-name">First Name</label>
-				<input type="text" name="first-name" id="first-name" />
+				<input type="text" name="firstname" id="first-name" />
 				<br />
 				<label for="last-name">Last Name</label>
-				<input type="text" name="last-name" id="last-name" />
+				<input type="text" name="lastname" id="last-name" />
 				<br />
 				<label for="email">Email</label>
 				<input type="text" name="email" id="email" />
 				<br />
 				<label for="creation-date">Creation Date</label>
-				<input disabled type="text" name="creation-date" id="creation-date" />
-				<!--#endregion Fields-->
-			</fieldset>
-			<fieldset name="new-user-buttons">
-				<!--New User-->
-				<input type="button" name="create-new-user" value="Create User" />
-				<input type="button" name="clear-new-user" value="Clear" />
-			</fieldset>
-			<fieldset hidden name="existing-user-buttons">
-				<!--Existing User-->
-				<input type="button" name="new" value="New User" />
-				<input type="button" name="update" value="Update User" />
-			</fieldset>
-			<fieldset hidden name="update-user-buttons">
-				<!--Update Cancel && Confirm-->
-				<input type="button" name="confirm-update" value="Confirm" />
-				<input type="button" name="cancel-update" value="Cancel" />
-			</fieldset>
-		</form>
+				<input disabled type="text" name="creationDate" id="creation-date" />
+				<input type="text" name="_id" hidden />
+				<fieldset>
+					<input type="button" name="create" value="Create" />
+					<input type="button" name="update" value="Update" />
+					<input type="button" name="delete" value="Delete" />
+				</fieldset>
+			</form>
+		</section>
 		<script src="api-calls.js"></script>
 		<script src="dom-queries.js"></script>
-		<script src="functions.js"></script>
-		<script src="dom-events.js"></script>
-		<script>
-			listUsers();
-		</script>
+		<script src="index.js"></script>
 	</body>
 </html>
