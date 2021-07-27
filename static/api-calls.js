@@ -1,4 +1,5 @@
 console.log("Hello World");
+console.log(window.location.href);
 const restUrl = "http://localhost:3000/users";
 
 async function getUsers() {
