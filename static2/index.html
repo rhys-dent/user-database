@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>User DB</title>
+	</head>
+	<body>
+		<section>
+			<h2>User List</h2>
+			<ul class="user-list"></ul>
+		</section>
+		<section>
+			<h2>User Data</h2>
+			<form>
+				<label for="first-name">First Name</label>
+				<input type="text" name="first-name" id="first-name" />
+				<br />
+				<label for="last-name">Last Name</label>
+				<input type="text" name="last-name" id="last-name" />
+				<br />
+				<label for="email">Email</label>
+				<input type="text" name="email" id="email" />
+				<br />
+				<label for="creation-date">Creation Date</label>
+				<input disabled type="text" name="creation-date" id="creation-date" />
+				<input hidden type="text" name="user-id" />
+				<fieldset>
+					<input type="button" value="Update" />
+					<input type="button" value="Delete" />
+				</fieldset>
+			</form>
+		</section>
+		<script src="api-calls.js"></script>
+		<script src="dom-queries.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
