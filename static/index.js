@@ -42,10 +42,17 @@ function getUserFromForm() {
 	);
 	return user;
 }
+function clearForm() {
+	userProperties.forEach((property) => (userForm[property].value = ""));
+}
+userForm["clear"].onclick = async function () {
+	clearForm();
+};
 userForm["create"].onclick = async function () {
 	const newUser = getUserFromForm();
 	await createUser(newUser);
 	listUsers();
+	clearForm();
 };
 userForm["update"].onclick = async function () {
 	const updatedUser = getUserFromForm();
@@ -56,5 +63,6 @@ userForm["delete"].onclick = async function () {
 	const id = userForm["_id"].value;
 	await deleteUser(id);
 	listUsers();
+	clearForm();
 };
 listUsers();

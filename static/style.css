@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+h2 {
+	margin: 2rem;
+}
+li {
+	list-style: none;
+}
+li > span {
+	vertical-align: middle;
+	font-size: x-large;
+}
+li > button {
+	vertical-align: middle;
+}
+li:hover > button {
+	display: inline-block;
+}
+section {
+}
+h2 {
+	text-align: center;
+}
+form,
+ul {
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, max(200px, 50%));
+	width: 50%;
+	margin: 0 auto;
+}
+li,
+label,
+input {
+	border: 1px solid black;
+}
+label {
+	display: block;
+	width: 100%;
+}
+.hidden {
+	display: none;
+}
+form input[type="button"] {
+	font-size: large;
+	padding: 0.5rem;
+	margin: 0.25rem;
+	box-shadow: 0 1px 1px black;
+}
+form input[type="button"]:active {
+	transform: translateY(1px);
+	box-shadow: none;
+}
+form input[value="Delete"] {
+	background-color: crimson;
+}
+
+form input[value="Create"] {
+	background-color: cadetblue;
+}
