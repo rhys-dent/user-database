@@ -1,7 +1,6 @@
 console.log("Hello World");
-console.log(window.location.href);
-const restUrl = "http://localhost:3000/users";
-
+const restUrl = window.location.href + "users";
+console.log(restUrl);
 async function getUsers() {
 	const users = await fetch(restUrl);
 	return users.json();
