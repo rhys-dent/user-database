@@ -1,23 +1,24 @@
-GET http://localhost:3000/subscribers/
+GET http://localhost:3000/users/
 
 ###
-GET http://localhost:3000/subscribers/60fdda2898b7355038c79bfd
+GET http://localhost:3000/users/60fdda2898b7355038c79bfd
 ###
-GET http://localhost:3000/subscribers/name/NewName
-###
-POST http://localhost:3000/subscribers/
+
+
+POST http://localhost:3000/users/
 Content-Type: application/json
 
 {
-    "name": "Amazing Person",
-    "subscribedToChannel":"Web Dev Simplified"
+    "firstname": "Dylan",
+    "lastname": "Dent",
+    "email": "June 17, 1989"
 }
 ###
-DELETE http://localhost:3000/subscribers/60fdda2898b7355038c79bfd
+DELETE http://localhost:3000/users/60fed347c5f5c517604ce288
 ###
-PATCH  http://localhost:3000/subscribers/60fddff064ec4a03f087938e
+PATCH  http://localhost:3000/users/60fddff064ec4a03f087938e
 Content-Type: application/json
 
 {
-    "name":"NewName"
+    "firstname":"NewName"
 }
